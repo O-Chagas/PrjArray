@@ -29,3 +29,47 @@ for (let index = 0; index < timesEspanhois.length; index++) {
     console.log(timesEspanhois[index]);
     
 }
+
+const lista = document.querySelector('.times');
+lerArray(timesEspanhois, lista);
+
+function lerArray(array, lista) {
+    array.forEach(element => {
+        const linha = document.createElement('li');
+        linha.innerHTML = element;
+        lista.appendChild(linha);
+    })
+}
+
+// mostrarLinhasnoDOM(timesEspanhois);
+
+// function mostrarLinhasnoDOM() {
+//     const ulLista = document.querySelector('.times');
+//     timesEspanhois.forEach(element => {
+//         const linha = document.createElement('li');
+//         linha.innerHTML = element;
+//         ulLista.appendChild(linha);
+//     })     
+// }
+
+// function lerArrayFor () {
+//     const lista = document.querySelector('.times');
+//     for (let index = 0; index < timesEspanhois.length; index++) {
+//         const linha = document.querySelector('li');
+//         linha.innerHTML = timesEspanhois[index];
+//         lista.appendChild(linha);        
+//     }
+// }
+
+let modelosCarros = ['Ferrari', 'Lamborghini', 'Porsche', 'McLaren', 'Bugatti'];
+
+const listaCarros = document.querySelector('.carros');
+mostrarArray(modelosCarros, listaCarros);
+function mostrarArray(array, lista) {
+    array.forEach(element => {
+        const linha = document.createElement('li');
+        linha.innerHTML = element;
+        lista.appendChild(linha);
+    })
+}
+
